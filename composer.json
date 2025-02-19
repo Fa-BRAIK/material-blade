@@ -51,7 +51,8 @@
             "@prepare",
             "@test"
         ],
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/pint",
+        "format:check": "vendor/bin/pint --test"
     },
     "config": {
         "sort-packages": true,
