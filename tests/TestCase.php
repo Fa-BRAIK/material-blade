@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Nuxtifyts\MaterialBlade\MaterialBladeServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
-class TestCase extends Orchestra
+abstract class TestCase extends Orchestra
 {
     /**
      * @return list<ServiceProvider::class>
