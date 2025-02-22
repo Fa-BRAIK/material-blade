@@ -1,0 +1,44 @@
+/*! tailwindcss v4.0.8 | MIT License | https://tailwindcss.com */
+@layer theme {
+  :root, :host {
+    --color-blue-600: oklch(.546 .245 262.881);
+    --color-blue-700: oklch(.488 .243 264.376);
+    --color-white: #fff;
+    --spacing: .25rem;
+    --radius-md: .375rem;
+    --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+    --default-transition-duration: .15s;
+    --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  }
+}
+
+.mb-btn {
+  border-radius: var(--radius-md);
+  background-color: var(--color-blue-600);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
+  color: var(--color-white);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: .3s;
+  --tw-ease: var(--ease-in-out);
+  transition-duration: .3s;
+  transition-timing-function: var(--ease-in-out);
+}
+
+@media (hover: hover) {
+  .mb-btn:hover {
+    background-color: var(--color-blue-700);
+  }
+}
+
+@property --tw-duration {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ease {
+  syntax: "*";
+  inherits: false
+}

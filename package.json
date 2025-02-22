@@ -1,0 +1,30 @@
+{
+    "name": "material-blade",
+    "version": "1.0.0",
+    "description": "Material design blade component for Laravel",
+    "homepage": "https://github.com/Fa-BRAIK/material-blade#readme",
+    "bugs": {
+        "url": "https://github.com/Fa-BRAIK/material-blade/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Fa-BRAIK/material-blade.git"
+    },
+    "license": "MIT",
+    "type": "module",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "dev": "vite build --watch --minify=false",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.0.8",
+        "glob": "^11.0.1",
+        "laravel-vite-plugin": "^1.2.0",
+        "tailwindcss": "^4.0.8",
+        "typescript": "~5.7.2",
+        "vite": "^6.1.1"
+    }
+}

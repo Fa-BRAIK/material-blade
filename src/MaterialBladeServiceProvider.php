@@ -2,7 +2,6 @@
 
 namespace Nuxtifyts\MaterialBlade;
 
-use Illuminate\View\Compilers\BladeCompiler;
 use Nuxtifyts\MaterialBlade\Components\ViewProvider;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -15,6 +14,7 @@ class MaterialBladeServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('material-blade')
+            ->hasAssets()
             ->hasConfigFile()
             ->hasViews('material-blade')
             ->hasViewComponent('material-blade', ViewProvider::class);
@@ -30,15 +30,15 @@ class MaterialBladeServiceProvider extends PackageServiceProvider
     protected function bootBladeDirectives(): static
     {
         /**
-         * @pushMaterialBladeStyles blade directive
+         * @pushMaterialBladeStyles directive
          */
         Blade::bindDirective(
             'pushMaterialBladeStyles',
-            fn() => "<?php \$__env->startPush(config('material-blade.view-provider.stacks.styles')); ?>"
+            fn() => '<?php $__env->startPush(config("material-blade.view-provider.stacks.styles")); ?>'
         );
 
         /**
-         * @endPushMaterialBladeStyles blade directive
+         * @endPushMaterialBladeStyles directive
          */
         Blade::bindDirective(
             'endPushMaterialBladeStyles',
@@ -46,15 +46,15 @@ class MaterialBladeServiceProvider extends PackageServiceProvider
         );
 
         /**
-         * @pushMaterialBladeScripts blade directive
+         * @pushMaterialBladeScripts directive
          */
         Blade::bindDirective(
             'pushMaterialBladeScripts',
-            fn() => "<?php \$__env->startPush(config('material-blade.view-provider.stacks.scripts')); ?>"
+            fn() => '<?php $__env->startPush(config("material-blade.view-provider.stacks.scripts")); ?>'
         );
 
         /**
-         * @endPushMaterialBladeScripts blade directive
+         * @endPushMaterialBladeScripts directive
          */
         Blade::bindDirective(
             'endPushMaterialBladeScripts',
