@@ -17,7 +17,7 @@ class MaterialBladeServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasViewComponents(
-                'material-blade',
+                'mb',
                 Components\ViewProvider::class,
                 Components\Core\Button::class,
                 Components\Core\ButtonGroup::class,
