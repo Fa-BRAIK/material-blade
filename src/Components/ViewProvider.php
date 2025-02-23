@@ -2,14 +2,23 @@
 
 namespace Nuxtifyts\MaterialBlade\Components;
 
-use Illuminate\Contracts\View\View;
+use Illuminate\View\View;
 use Illuminate\View\Component;
-use Closure;
 
 class ViewProvider extends Component
 {
-    public function render(): View|Closure|string
+    public string $lang;
+
+    public function __construct(
+        public string $title,
+        string $lang = ''
+    ) {
+        $this->lang = $lang ?: str_replace('_', '-', app()->getLocale());
+    }
+
+    public function render(): View
     {
+        // @phpstan-ignore-next-line
         return view('material-blade::components.view-provider');
     }
 }

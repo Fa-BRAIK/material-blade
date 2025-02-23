@@ -1,13 +1,19 @@
 <!doctype html>
-<html lang="{{ $lang ?? str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ $lang }}">
 <head>
-    @yield('head')
+    <title> {{ $title }} </title>
+
+    {{ $metaTags ?? '' }}
+
+    <link rel="stylesheet" href="{{ asset('vendor/material-blade/base.min.css') }}" />
+
+    {{ $assets ?? '' }}
 
     @stack(config("material-blade.view-provider.stacks.styles"))
     @stack(config("material-blade.view-provider.stacks.scripts"))
 </head>
 
 <body>
-    @yield('body')
+    {{ $body ?? '' }}
 </body>
 </html>

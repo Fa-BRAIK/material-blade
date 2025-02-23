@@ -16,7 +16,7 @@ class MaterialBladeServiceProvider extends PackageServiceProvider
             ->name('material-blade')
             ->hasAssets()
             ->hasConfigFile()
-            ->hasViews('material-blade')
+            ->hasViews()
             ->hasViewComponent('material-blade', ViewProvider::class);
     }
 
