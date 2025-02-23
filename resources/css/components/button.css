@@ -1,5 +1,169 @@
 @reference '~/base.css';
 
-.mb-btn {
-    @apply px-4 py-2 rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 ease-in-out;
+@layer components {
+    .mb-btn {
+        @apply text-sm font-bold inline-flex items-center transition duration-300;
+
+        &:not(:disabled) {
+            @apply cursor-pointer;
+        }
+
+        &.filled {
+            &.dark {
+                @apply bg-gray-800 border border-gray-800 text-white;
+
+                &:not(:disabled) {
+                    @apply hover:bg-gray-700 hover:border-gray-700;
+                }
+            }
+
+            &.red {
+                @apply bg-red-600 text-white;
+
+                &:not(:disabled) {
+                    @apply hover:bg-red-500;
+                }
+            }
+
+            &.green {
+                @apply bg-green-600 text-white;
+
+                &:not(:disabled) {
+                    @apply hover:bg-green-500;
+                }
+            }
+
+            &.orange {
+                @apply bg-orange-600 text-white;
+
+                &:not(:disabled) {
+                    @apply hover:bg-orange-500;
+                }
+            }
+
+            &.white {
+                @apply bg-white border border-white text-gray-800;
+
+                &:not(:disabled) {
+                    @apply hover:bg-gray-100;
+                }
+            }
+        }
+
+        &.outlined {
+            &.dark {
+                @apply bg-transparent border border-gray-800 text-gray-800;
+
+                &:not(:disabled) {
+                    @apply hover:bg-gray-800 hover:text-white;
+                }
+            }
+
+            &.red {
+                @apply bg-transparent border border-red-600 text-red-600;
+
+                &:not(:disabled) {
+                    @apply hover:bg-red-600 hover:text-white;
+                }
+            }
+
+            &.green {
+                @apply bg-transparent border border-green-600 text-green-600;
+
+                &:not(:disabled) {
+                    @apply hover:bg-green-600 hover:text-white;
+                }
+            }
+
+            &.orange {
+                @apply bg-transparent border border-orange-600 text-orange-600;
+
+                &:not(:disabled) {
+                    @apply hover:bg-orange-600 hover:text-white;
+                }
+            }
+
+            &.white {
+                @apply bg-transparent border border-white text-white;
+
+                &:not(:disabled) {
+                    @apply hover:bg-white hover:text-gray-800;
+                }
+            }
+        }
+
+        &.text {
+            &.dark {
+                @apply bg-transparent text-gray-800;
+
+                &:not(:disabled) {
+                    @apply hover:text-white;
+                }
+            }
+
+            &.red {
+                @apply bg-transparent text-red-600;
+
+                &:not(:disabled) {
+                    @apply hover:text-white;
+                }
+            }
+
+            &.green {
+                @apply bg-transparent text-green-600;
+
+                &:not(:disabled) {
+                    @apply hover:text-white;
+                }
+            }
+
+            &.orange {
+                @apply bg-transparent text-orange-600;
+
+                &:not(:disabled) {
+                    @apply hover:text-white;
+                }
+            }
+
+            &.white {
+                @apply bg-transparent text-white;
+
+                &:not(:disabled) {
+                    @apply hover:text-gray-800;
+                }
+            }
+        }
+
+        &.xs {
+            @apply px-3.25 py-1.75 gap-1;
+        }
+
+        &.sm {
+            @apply px-3.75 py-2.25 gap-1.5;
+        }
+
+        &.base {
+            @apply px-4.25 py-2.25 gap-2;
+        }
+
+        &.lg {
+            @apply px-4.75 py-2.75 gap-2.5;
+        }
+
+        &.xl {
+            @apply px-6.75 py-3.75 gap-3.5;
+        }
+
+        &.rounded {
+            @apply rounded;
+        }
+
+        &.rounded-lg {
+            @apply rounded-lg;
+        }
+
+        &.rounded-full {
+            @apply rounded-full;
+        }
+    }
 }

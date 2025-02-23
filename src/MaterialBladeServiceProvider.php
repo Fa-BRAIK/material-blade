@@ -2,7 +2,6 @@
 
 namespace Nuxtifyts\MaterialBlade;
 
-use Nuxtifyts\MaterialBlade\Components\ViewProvider;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -17,7 +16,11 @@ class MaterialBladeServiceProvider extends PackageServiceProvider
             ->hasAssets()
             ->hasConfigFile()
             ->hasViews()
-            ->hasViewComponent('material-blade', ViewProvider::class);
+            ->hasViewComponents(
+                'material-blade',
+                Components\ViewProvider::class,
+                Components\Core\Button::class,
+            );
     }
 
     #[Override]
