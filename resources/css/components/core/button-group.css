@@ -1,0 +1,21 @@
+@reference '~/base.css';
+
+@layer components {
+    .mb-btn-group {
+        @apply flex items-center;
+    
+        > .mb-btn {
+            &:first-child {
+                @apply rounded-r-none;
+            }
+    
+            &:not(:first-child):not(:last-child) {
+                @apply rounded-none;
+            }
+    
+            &:last-child {
+                @apply rounded-l-none;
+            }
+        }
+    }
+}

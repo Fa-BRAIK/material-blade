@@ -20,6 +20,7 @@ class MaterialBladeServiceProvider extends PackageServiceProvider
                 'material-blade',
                 Components\ViewProvider::class,
                 Components\Core\Button::class,
+                Components\Core\ButtonGroup::class,
             );
     }
 
